@@ -1,0 +1,17 @@
+name: fast
+desc: Performing a quick summary data analysis
+type: general
+validator: domain
+
+usage: |
+    osmedeus scan -f fast -t target.com
+
+routines:
+  - modules:
+      - subdomain
+  - modules:
+      - probing
+  - modules:
+      - fingerprint
+  - modules:
+      - summary
