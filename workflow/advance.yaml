@@ -1,0 +1,19 @@
+name: advance
+desc: run advance routine
+type: advance
+validator: domain
+
+routines:
+  - modules:
+      - subdomain
+      - probing
+      - fingerprint
+      - portscan
+      - ipspace
+      - archive
+      - spider
+      - dirbscan
+      - vulnscan
+      - cloudbrute
+      - credintel
+      - summary 
