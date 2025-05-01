@@ -2,13 +2,27 @@
 
 Vulnx is a powerful vulnerability scanning and reconnaissance tool designed for security professionals and penetration testers. It provides comprehensive scanning capabilities with parallel execution for efficient security assessments.
 
-![Vulnx Logo](logo.png)
+![Vulnx Logo](static/logo.png)
 
 ## Overview
 
 Vulnx is a next-generation security scanning platform that combines advanced reconnaissance techniques with powerful vulnerability assessment capabilities. Built with performance and extensibility in mind, it enables security professionals to conduct thorough security assessments efficiently.
 
 The tool's modular architecture allows for easy integration of new scanning modules and custom workflows, making it adaptable to various security assessment scenarios. Whether you're conducting a quick security check or a comprehensive penetration test, Vulnx provides the tools and flexibility needed for effective security analysis.
+
+## Installation
+
+### Quick Start
+```bash
+# Clone the repository
+git clone https://github.com/whoamikiddie/vulnx-base.git
+
+# Navigate to the project directory
+cd vulnx-base
+
+# Move the binary to system path
+sudo mv vulnx /usr/bin
+```
 
 ## Key Features
 
