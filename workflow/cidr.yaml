@@ -1,0 +1,22 @@
+name: cidr
+desc: Scanning for CIDR File
+type: cidr
+validator: cidr-file
+
+usage: |
+    vulnx scan -f cidr -t '1.2.3.4/24'
+    vulnx scan -f cidr -t cidr_file.txt
+    vulnx scan -f cidr -t cidr_file.txt -w custom_ws
+    # Skip the port fingerprint
+    vulnx scan -f cidr -t cidr_file.txt -p 'skipPortFingerprint=true'
+
+routines:
+  - modules:
+      - portscan
+  - modules:
+      - screenshot
+  - modules:
+      - port-fingerprint
+      - vulnscan
+  - modules:
+      - dirbscan

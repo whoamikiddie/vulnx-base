@@ -1,0 +1,20 @@
+name: vuln-and-dirb
+desc: Perform vulnerability scanning and directory brute-forcing
+type: general
+validator: domain
+
+usage: |
+    vulnx scan -f vuln-and-dirb -t target.com
+
+routines:
+  - modules:
+      - subdomain
+  - modules:
+      - probing
+  - modules:
+      - fingerprint
+  - modules:
+      - vulnscan
+  - modules:
+      - dirbscan
+  - defaultUA: "User-Agent: Mozilla/5.0 (compatible; vulnx/v4; +https://github.com/whoamikiddie/vulnx)"

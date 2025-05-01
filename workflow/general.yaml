@@ -1,0 +1,35 @@
+name: general
+desc: Perform general scanning and analysis
+type: general
+validator: domain
+
+usage: |
+    vulnx scan -f general -t target.com
+    vulnx scan -f general -x spidering -t example.com
+    vulnx scan -f general -t example.com -p 'enableDnsBruteFocing=true'
+
+routines:
+  - modules:
+      - subdomain
+  - modules:
+      - probing
+  - modules:
+      - fingerprint
+  - modules:
+      - screenshot
+  - modules:
+      - spider
+  - modules:
+      - sto
+      - archive
+      - ipspace
+  - modules:
+      - vulnscan
+  - modules:
+      - dirbscan
+  - modules:
+      - portscan
+  - modules:
+      - summary
+  - defaultUA: "User-Agent: Mozilla/5.0 (compatible; vulnx/v4; +https://github.com/whoamikiddie/vulnx)"
+

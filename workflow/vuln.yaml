@@ -1,0 +1,24 @@
+name: vuln
+desc: Perform vulnerability scanning
+type: general
+validator: domain
+
+
+usage: |
+    vulnx scan -f vuln -t target.com
+    vulnx scan -f vuln -t example.com -p 'enableDnsBruteFocing=true'
+
+
+routines:
+  - modules:
+      - subdomain
+  - modules:
+      - probing
+  - modules:
+      - ssame
+      - sto
+  - modules:
+      - vulnscan
+  - modules:
+      - dirbscan
+  - defaultUA: "User-Agent: Mozilla/5.0 (compatible; vulnx/v4; +https://github.com/whoamikiddie/vulnx)"

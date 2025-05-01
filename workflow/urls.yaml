@@ -1,0 +1,16 @@
+name: urls
+desc: Perform URL analysis and scanning
+type: general
+validator: url
+
+usage: |
+    vulnx scan -f urls -t target.com
+
+routines:
+  - modules:
+      - probing
+  - modules:
+      - fingerprint
+  - modules:
+      - vulnscan
+  - defaultUA: "User-Agent: Mozilla/5.0 (compatible; vulnx/v4; +https://github.com/whoamikiddie/vulnx)"
