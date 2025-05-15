@@ -2,7 +2,7 @@
 
 Vulnx is a powerful vulnerability scanning and reconnaissance tool designed for security professionals and penetration testers. It provides comprehensive scanning capabilities with parallel execution for efficient security assessments.
 
-![Vulnx Logo](logo.png)
+![Vulnx Logo](logo.svg)
 
 ## Overview
 
